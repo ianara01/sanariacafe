@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu List</title>
+</head>
+<body>
+    <h1>{{cafe_name}} Café Menu List</h1>
+    <a href="{% url 'manager:manager_home' %}">Home</a>"
+    <ul>
+        {% for menu in menus_to_page %}
+            <li>
+                <a href="{% url 'manager:menu_detail' menu.id %}">{{menu.menu_name}} : {{menu.menu_price}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'manager:menu_add' %}">Add a new item(s)</a>
+    <a href="{% url 'manager:manager_home' %}">Home</a>
+</body>
+</html>

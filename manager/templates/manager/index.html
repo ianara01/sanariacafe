@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Café Sanaria !</title>
+</head>
+<h1>Cafe Sanaria</h1>
+<p>관리자 페이지입니다</p>
+<img src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/5-jakarta-cafes-every-instagrammer-should-visit/header.jpg" alt="" width="70%" height="auto">
+<body>
+    <h1>Welcome to Our Café Sanaria !</h1>
+    <nav>
+        <ul>
+            <li><a href="/admin/">관리자페이지</a></li>
+            <li><a href="{% url 'manager:menu_list' %}">View Menu List</a></li>
+            <li><a href="{% url 'manager:menu_add' %}">Add Menu Items</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
